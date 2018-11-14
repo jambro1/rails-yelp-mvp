@@ -1,0 +1,29 @@
+<h1>We are in show</h1>
+
+<div>
+<%= @restaurant.name %>
+</div>
+
+<div>
+<%= @restaurant.address %>
+</div>
+
+<div>
+<%= @restaurant.phone_number %>
+</div>
+
+<div>
+  <ul>
+  <% @restaurant.reviews.each do |r| %>
+    <li><%= r.content%></li>
+    <% end %>
+  </ul>
+</div>
+
+
+
+<%= link_to "Write a Review",  new_restaurant_review_path(@restaurant), class: "btn btn-warning"%>
+
+<%= link_to "Go Back",  restaurants_path, class: "btn btn-warning"%>
+
+

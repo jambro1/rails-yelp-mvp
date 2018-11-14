@@ -1,0 +1,13 @@
+<h1>We are in new</h1>
+
+
+<%= simple_form_for [@restaurant] do |f| %>
+     <%= f.input :name %>
+     <%= f.input :address %>
+     <%= f.input :phone_number %>
+     <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"]%>
+     <%= f.submit "Add a New Restaurant", class: "btn btn-warning" %>
+<% end %>
+
+
+<%= link_to "Go Back",  restaurants_path, class: "btn btn-warning"%>
